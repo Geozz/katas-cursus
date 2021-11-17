@@ -1,9 +1,19 @@
 class Cart:
     def __init__(self):
-        pass
+        self.books = [[]]
 
-    def addBook(self, title):
-        pass
+    def add_book(self, title):
+        for lot in self.books:
+            if title in lot:
+                continue
+            lot.append(title)
+            return
 
-    def getPrice(self):
-        return -1
+        self.books.append([title])
+
+    def get_price(self):
+        result = 0
+        for lot in self.books:
+            discount = (len(lot) - 1) * 0.05
+            result += 8 * len(lot) * (1 - discount)
+        return result

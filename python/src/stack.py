@@ -1,12 +1,12 @@
 class Stack:
     def __init__(self):
-        pass
+        self.value = []
 
     def push(self, value):
-        pass
+        self.value.append(value)
 
     def pop(self):
-        return None
+        return self.value.pop()
 
     def count(self):
-        return -1
+        return len(self.value)
