@@ -4,12 +4,6 @@ from stack import Stack
 
 
 class TestStack(TestCase):
-    """
-    push should stack the provided value
-    pop should provide the latest value
-    count should return the stack size
-    """
-
     def setUp(self) -> None:
         self.stack = Stack()
 
